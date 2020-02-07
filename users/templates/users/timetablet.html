@@ -1,0 +1,81 @@
+{% extends "timetable/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+      {% if user.profile.Department %}
+	<div>
+	<table>
+    <thead>
+      <tr>
+
+        <th>Day</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="text">9:00-10:00</td>
+        <td class="text">{{tt.D1P1}}</td>
+        <td class="text">{{tt.D1P2}}</td>
+        <td class="text">{{tt.D1P3}}</td>
+        <td class="text">{{tt.D1P4}}</td>
+        <td class="text">{{tt.D1P5}}</td>
+        <td class="text">{{tt.D1P6}}</td>
+      </tr>
+      <tr>
+        <td class="text">10:00-11:00</td>
+        <td class="text">{{tt.D2P1}}</td>
+        <td class="text">{{tt.D2P2}}</td>
+        <td class="text">{{tt.D2P3}}</td>
+        <td class="text">{{tt.D2P4}}</td>
+        <td class="text">{{tt.D2P5}}</td>
+        <td class="text">{{tt.D2P6}}</td>
+      </tr>
+      <tr>
+        <td class="text">11:00-12:00</td>
+        <td class="text">{{tt.D3P1}}</td>
+        <td class="text">{{tt.D3P2}}</td>
+        <td class="text">{{tt.D3P3}}</td>
+        <td class="text">{{tt.D3P4}}</td>
+        <td class="text">{{tt.D3P5}}</td>
+        <td class="text">{{tt.D3P6}}</td>
+      </tr>
+      <tr>
+        <td class="text">2:00-3:00</td>
+        <td class="text">{{tt.D4P1}}</td>
+        <td class="text">{{tt.D4P2}}</td>
+        <td class="text">{{tt.D4P3}}</td>
+        <td class="text">{{tt.D4P4}}</td>
+        <td class="text">{{tt.D4P5}}</td>
+        <td class="text">{{tt.D4P6}}</td>
+      </tr>
+      <tr>
+        <td class="text">3:00-4:00</td>
+        <td class="text">{{tt.D5P1}}</td>
+        <td class="text">{{tt.D5P2}}</td>
+        <td class="text">{{tt.D5P3}}</td>
+        <td class="text">{{tt.D5P4}}</td>
+        <td class="text">{{tt.D5P5}}</td>
+        <td class="text">{{tt.D5P6}}</td>
+      </tr>
+      <tr>
+        <td class="text">4:00-5:00</td>
+        <td class="text">{{tt.D6P1}}</td>
+        <td class="text">{{tt.D6P2}}</td>
+        <td class="text">{{tt.D6P3}}</td>
+        <td class="text">{{tt.D6P4}}</td>
+        <td class="text">{{tt.D6P5}}</td>
+        <td class="text">{{tt.D6P6}}</td>
+      </tr>
+    </tbody>
+  </table>
+    <button type="button" class="btn btn-secondary btn-lg"><a href="{% url 'dept-update' tt.id %}">Update</a></button>
+  </div>
+  {% else %}
+  <a href="{% url 'profile' %}"><h1>Fill Your Profile</h1></a>
+  {% endif %}
+{% endblock content %}
