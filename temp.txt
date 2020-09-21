@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+#define ll long long
+#define FAST ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+#define f(i, a, b) for(ll i=a; i<b; i++)
+#define fr(i,a,b) for(ll i=a;i>=b;i--)
+#define pb push_back
+#define mp make_pair
+#define F first
+#define S second
+#define LB lower_bound
+#define UB upper_bound
+#define pll pair<ll,ll>
+#define endl "\n"
+#define PI 3.141592653589793
+using namespace std;
+int main()
+{
+    FAST
+    ll t;cin>>t;
+    while(t--)
+    {
+
+    }	
+}
